@@ -30,10 +30,12 @@ type (
 
 	// Alert is a single alert.
 	Alert struct {
+		Status      string            `json:"status"`
 		Labels      map[string]string `json:"labels"`
 		Annotations map[string]string `json:"annotations"`
 		StartsAt    string            `json:"startsAt,omitempty"`
 		EndsAt      string            `json:"EndsAt,omitempty"`
+		GeneratorURL string           `json:"generatorURL"`
 	}
 
 	// just an example alert store. in a real hook, you would do something useful
